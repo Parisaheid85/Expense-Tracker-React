@@ -7,11 +7,10 @@ export const Transaction = ({ transaction }) => {
   const sign = transaction.amount > 0 ? "+" : "-";
 
   return (
-    <li className={transaction.amount < 0 ? "plus" : "minus"}>
+    <li className={transaction.amount > 0 ? "plus" : "minus"}>
       {transaction.text}{" "}
       <span>
-        {sign}
-        {transaction.amount}
+        {sign}${Math.abs(transaction.amount)}
       </span>
       <span>{transaction.date}</span>
       <span>{transaction.paymentType}</span>

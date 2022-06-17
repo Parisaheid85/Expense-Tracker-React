@@ -9,9 +9,9 @@ export const Balance = () => {
   const total = amounts.reduce((acc, item) => (acc += item), 0);
 
   return (
-    <>
+    <div className="balance">
       <h4>Your Balance</h4>
-      <h1>{total}</h1>
-    </>
+      <h3>${total}</h3>
+    </div>
   );
 };

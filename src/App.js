@@ -12,12 +12,14 @@ import "./App.css";
 function App() {
   return (
     <GlobalProvider>
-      <Header />
       <div className="container">
-        <Balance />
-        <IncomeExpenses />
-        <TransactionList />
-        <AddTransaction />
+        <div className="main-wrapper">
+          <Header />
+          <Balance />
+          <IncomeExpenses />
+          <TransactionList />
+          <AddTransaction />
+        </div>
       </div>
     </GlobalProvider>
   );

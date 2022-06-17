@@ -3,7 +3,7 @@ import { GlobalContext } from "../context/GlobalState";
 
 export const AddTransaction = () => {
   const [text, setText] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
   const [paymentType, setPaymentType] = useState("");
 
@@ -49,7 +49,7 @@ export const AddTransaction = () => {
         </div>
         <select
           onChange={(e) => setPaymentType(e.target.value)}
-          class="input input-type"
+          class="input-type"
         >
           <option value="income">Income</option>
           <option value="expense">Expense</option>
@@ -58,9 +58,9 @@ export const AddTransaction = () => {
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
-          class="input input-date"
+          class="input-date"
         />
-        <button className="btn">Add transaction</button>
+        <button className="btn">Add Transaction</button>
       </form>
     </>
   );
